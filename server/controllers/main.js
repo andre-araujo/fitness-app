@@ -1,3 +1,5 @@
-module.exports = function(req, res) {
-    res.send('root')
+function main(req, res) {
+    res.send('Root');
 }
+
+module.exports = main;
