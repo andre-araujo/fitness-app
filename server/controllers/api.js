@@ -1,3 +1,7 @@
-module.exports = function(req, res) {
-    res.send({status: 'ok'})
+function api(req, res) {
+    res.send({
+        status: 'ok'
+    });
 }
+
+module.exports = api;

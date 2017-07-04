@@ -1,7 +1,10 @@
+
 const express = require('express');
+const config = require('./utils/config');
+const routes = require('./routes');
+
 const app = express();
 
-const config = require('./utils/config');
-const routes = require('./routes')(app);
+routes(app);
 
 app.listen(config.PORT);
