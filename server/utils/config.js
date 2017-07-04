@@ -1,4 +1,4 @@
 module.exports = {
-    PORT: 7777,
+    PORT: 3001,
     API_URL: '/api'
 };
