@@ -4,18 +4,18 @@
   "private": true,
   "dependencies": {
     "express": "^4.15.3",
-    "node-sass": "^4.5.3",
     "nodemon": "^1.11.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-scripts": "1.0.10"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "npm-run-all --parallel client server",
+    "server": "nodemon server/index.js",
+    "client": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "server": "nodemon server/index.js",
     "lint": "eslint .",
     "comb": "csscomb src"
   },
@@ -26,6 +26,7 @@
     "eslint-plugin-babel": "^4.1.1",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^5.0.1",
-    "eslint-plugin-react": "^7.0.1"
+    "eslint-plugin-react": "^7.0.1",
+    "npm-run-all": "^4.0.2"
   }
 }
