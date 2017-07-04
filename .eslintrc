@@ -60,11 +60,7 @@
       "babel/object-curly-spacing": [1, "always"],
       "babel/object-shorthand": 1
     },
-    "parserOptions": {
-       "ecmaFeatures": {
-         "experimentalObjectRestSpread": true
-       }
-    },
+    "parser": "babel-eslint",
     "plugins": [
         "react",
         "babel"

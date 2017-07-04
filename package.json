@@ -5,6 +5,7 @@
   "dependencies": {
     "express": "^4.15.3",
     "nodemon": "^1.11.0",
+    "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-scripts": "1.0.10"
@@ -20,6 +21,7 @@
     "comb": "csscomb src"
   },
   "devDependencies": {
+    "babel-eslint": "^7.2.3",
     "csscomb": "^4.2.0",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^15.0.1",
