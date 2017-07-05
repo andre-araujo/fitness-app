@@ -1,0 +1,27 @@
+.text-input {
+    position: relative;
+    margin-top: 1.25rem;
+}
+
+.text-input__label {
+    left: 0;
+    position: absolute;
+    top: 0;
+    transform: translateY(-100%);
+    transition: 0.2s top, 0.2s transform;
+}
+
+.text-input__label--empty {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.text-input__field {
+    outline: none;
+    box-shadow: none;
+    border: none;
+    border-bottom: 1px solid #333;
+}
+
+
+

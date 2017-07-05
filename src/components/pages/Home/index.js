@@ -1,9 +1,13 @@
 import React from 'react';
 
+import AddDashboardItem from './AddDashboardItem';
+
 function Home() {
 
     return (
-        <h1>Homepage</h1>
+        <main>
+            <AddDashboardItem />
+        </main>
     );
 }
 

@@ -3,23 +3,28 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "classnames": "^2.2.5",
+    "enzyme": "^2.9.1",
     "express": "^4.15.3",
     "nodemon": "^1.11.0",
+    "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "react-scripts": "1.0.10"
+    "react-scripts": "1.0.10",
+    "react-test-renderer": "^15.6.1"
   },
   "scripts": {
     "start": "npm-run-all --parallel client server",
     "server": "nodemon server/index.js",
     "client": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "react-scripts test --env=jsdom --coverage",
     "eject": "react-scripts eject",
     "lint": "eslint .",
     "comb": "csscomb src"
   },
   "devDependencies": {
+    "babel-eslint": "^7.2.3",
     "csscomb": "^4.2.0",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^15.0.1",
