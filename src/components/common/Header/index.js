@@ -6,15 +6,15 @@ import './styles.css';
 
 function Header() {
     return (
-        <nav className="header">
+        <header className="header">
             <Container>
-                <div className="header__content">
+                <nav className="header__content">
                     <h1>
                         FITNESS APP
                     </h1>
-                </div>
+                </nav>
             </Container>
-        </nav>
+        </header>
     );
 }
 

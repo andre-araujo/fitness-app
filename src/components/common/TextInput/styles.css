@@ -8,13 +8,13 @@
 
 .text-input__label {
     color: #fafafa;
+    font-family: AvantGardeMedium;
+    font-size: 0.875rem;
     left: 0;
     position: absolute;
     top: 0;
     transform: translateY(-100%);
     transition: 0.2s top, 0.2s transform;
-    font-family: AvantGardeMedium;
-    font-size: 0.875rem;
 }
 
 .text-input__label--empty {
@@ -28,9 +28,9 @@
     border-bottom: 1px solid #fafafa;
     box-shadow: none;
     color: #fafafa;
+    font-family: AvantGardeMedium;
     font-size: 0.875rem;
     outline: none;
-    font-family: AvantGardeMedium;
 }
 
 

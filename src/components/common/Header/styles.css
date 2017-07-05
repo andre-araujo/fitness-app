@@ -4,8 +4,8 @@
 
 .header__content {
     align-items: center;
-    display: flex;
-    height: 3.125rem;
     color: #fafafa;
+    display: flex;
     font-family: AvantGardeDemi;
+    height: 3.125rem;
 }
