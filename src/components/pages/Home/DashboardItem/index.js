@@ -6,10 +6,18 @@ import './styles.css';
 function DashboardItem({
     title,
     image,
-    calories,
-    sodium,
-    fat
+    info
 }) {
+    const infoKeys = Object.keys(info);
+    const infoRows = infoKeys.map((infokey, index) => (
+        <p
+            key={index}
+            className="dashboard-item__text">
+            <span>{infokey}: </span>
+            <span>{info[infokey]}</span>
+        </p>
+    ));
+
     return (
         <li className="dashboard-item">
             <section>
@@ -38,20 +46,8 @@ function DashboardItem({
 
                     </div>
 
-                    {
-                        calories &&
-                        <p className="dashboard-item__text">Calories: {calories}</p>
-                    }
+                    { infoRows }
 
-                    {
-                        sodium &&
-                        <p className="dashboard-item__text">Sodium: {sodium}</p>
-                    }
-
-                    {
-                        fat &&
-                        <p className="dashboard-item__text">Fat: {fat}</p>
-                    }
                 </div>
             </section>
         </li>
@@ -59,19 +55,19 @@ function DashboardItem({
 }
 
 DashboardItem.defaultProps = {
-    title: PropTypes.string.isRequired,
+    title: '',
     image: null,
-    calories: null,
-    sodium: null,
-    fat: null
+    info: null
 }
 
 DashboardItem.propTypes = {
     title: PropTypes.string.isRequired,
     image: PropTypes.string,
-    calories: PropTypes.string,
-    sodium: PropTypes.string,
-    fat: PropTypes.string
+    info: PropTypes.shape({
+        calories: PropTypes.string,
+        sodium: PropTypes.string,
+        fat: PropTypes.string
+    })
 }
 
 export default DashboardItem;
