@@ -1,6 +1,5 @@
 {
     "rules": {
-      // General JavaScript //
       "linebreak-style":"off",
       "no-undef": [2],
       "no-trailing-spaces": [1],
@@ -25,7 +24,6 @@
       "spaced-comment": [0],
       "jsx-quotes": [0, "prefer-single"],
 
-      // React JSX //
       "react/no-array-index-key": [0],
       "react/jsx-boolean-value": 1,
       "react/jsx-no-undef": 2,
@@ -47,14 +45,12 @@
       }],
       "react/jsx-wrap-multilines": 1,
 
-      // ES6 //
       "generator-star-spacing": 0,
       "new-cap": 0,
       "object-curly-spacing": 0,
       "object-shorthand": 0,
       "import/prefer-default-export": [0],
 
-      // Babel //
       "babel/generator-star-spacing": 1,
       "babel/new-cap": 1,
       "babel/object-curly-spacing": [1, "always"],
