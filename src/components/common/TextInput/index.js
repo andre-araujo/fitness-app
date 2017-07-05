@@ -57,19 +57,21 @@ class TextInput extends Component {
 
         return (
             <div className="text-input">
-                <label
-                    htmlFor={`#${name}`}
-                    className={labelClassName}>
-                    {label}
-                </label>
-                <input
-                    id={name}
-                    type="text"
-                    className="text-input__field"
-                    value={value}
-                    name={name}
-                    onChange={this._onChangeText}
-                />
+                <div className="text-input__content">
+                    <label
+                        htmlFor={`#${name}`}
+                        className={labelClassName}>
+                        {label}
+                    </label>
+                    <input
+                        id={name}
+                        type="text"
+                        className="text-input__field"
+                        value={value}
+                        name={name}
+                        onChange={this._onChangeText}
+                    />
+                </div>
             </div>
         );
     }

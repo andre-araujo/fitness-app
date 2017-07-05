@@ -1,0 +1,10 @@
+.homepage {
+    background: #333;
+    height: 100vh;
+}
+
+.homepage__content {
+    background: #333;
+    padding: 1.875rem 0;
+    height: 100vh;
+}

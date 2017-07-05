@@ -35,7 +35,7 @@ class LoginForm extends Component {
                     onChangeText={this._usernameInputChange}
                 />
 
-                <input type="submit" value="login" />
+                <input type="submit" value="Create" />
             </form>
         );
     }
