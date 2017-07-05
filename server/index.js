@@ -1,7 +1,7 @@
 
 const express = require('express');
 const config = require('./utils/config');
-const routes = require('./routes');
+const routes = require('./app/routes');
 
 const app = express();
 
