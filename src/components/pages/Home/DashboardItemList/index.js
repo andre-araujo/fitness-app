@@ -17,7 +17,6 @@ function DashboardItemList() {
                 </h2>
             </header>
             <ul className="dashboard-item-list__content">
-                <DashboardItem title="tika massala" />
             </ul>
         </section>
     );
