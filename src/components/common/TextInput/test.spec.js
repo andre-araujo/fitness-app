@@ -14,7 +14,7 @@ describe('TextInput component', () => {
         onChangeText: jest.fn(),
     }
 
-    it('renders without crashing', () => {
+    it('should render without crashing', () => {
         shallow(<TextInput {...props} />);
     });
 

@@ -1,0 +1,11 @@
+.header {
+    background: #009ec6;
+}
+
+.header__content {
+    align-items: center;
+    display: flex;
+    height: 3.125rem;
+    color: #fafafa;
+    font-family: AvantGardeDemi;
+}

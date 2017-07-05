@@ -1,13 +1,21 @@
 import React from 'react';
 
+import Header from './../../common/Header';
+import Container from './../../common/Container';
 import AddDashboardItem from './AddDashboardItem';
+import './styles.css';
 
 function Home() {
 
     return (
-        <main>
-            <AddDashboardItem />
-        </main>
+        <div className="homepage">
+            <Header />
+            <Container>
+                <main className="homepage__content">
+                    <AddDashboardItem />
+                </main>
+            </Container>
+        </div>
     );
 }
 
