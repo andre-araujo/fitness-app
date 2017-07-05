@@ -1,0 +1,22 @@
+.radio {
+    display: inline-block;
+    margin-bottom: 0.725rem;
+    text-align: center;
+}
+
+.radio:not(:first-child) {
+    margin-left: 1rem;
+}
+
+.radio__field {
+    display: none;
+}
+
+.radio__label {
+    color: #fafafa;
+    cursor: pointer;
+}
+
+.radio__field:checked + .radio__label {
+    color: gold;
+}
