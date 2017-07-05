@@ -1,0 +1,9 @@
+{
+    "ignore": [
+        "coverage/*",
+        "node_modules/*",
+        "public/*",
+        "src/*",
+        "server/db/*"
+    ]
+}
