@@ -1,0 +1,16 @@
+.dashboard-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 0.9375rem;
+    padding-bottom: 0.9375rem;
+}
+
+.dashboard-header__icon {
+    color: #fafafa;
+    font-size: 1.875rem;
+    margin-right: 0.9375rem;
+}
+
+.dashboard-header__title {
+    color: #fafafa;
+    font-size: 1.25rem;
+}

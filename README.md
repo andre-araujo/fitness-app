@@ -1,7 +1,7 @@
 Fitness app
 
-##Install
+Install
 ```npm install```
 
-##Start
+Start
 ```npm start```

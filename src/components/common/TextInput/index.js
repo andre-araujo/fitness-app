@@ -59,7 +59,7 @@ class TextInput extends Component {
             <div className="text-input">
                 <div className="text-input__content">
                     <label
-                        htmlFor={`#${name}`}
+                        htmlFor={name}
                         className={labelClassName}>
                         {label}
                     </label>

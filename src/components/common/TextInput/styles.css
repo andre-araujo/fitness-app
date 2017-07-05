@@ -1,5 +1,5 @@
 .text-input {
-    padding-top: 1.25rem;
+    padding: 1.25rem 0;
 }
 
 .text-input__content {
@@ -8,16 +8,18 @@
 
 .text-input__label {
     color: #fafafa;
-    font-family: AvantGardeMedium;
-    font-size: 0.875rem;
+    font-family: AvantGardeLight;
+    font-size: 0.75rem;
     left: 0;
+    opacity: 0.6;
     position: absolute;
     top: 0;
     transform: translateY(-100%);
-    transition: 0.2s top, 0.2s transform;
+    transition: 0.2s top, 0.2s transform, 0.2s font-size;
 }
 
 .text-input__label--empty {
+    font-size: 0.875rem;
     top: 50%;
     transform: translateY(-50%);
 }
@@ -28,10 +30,8 @@
     border-bottom: 1px solid #fafafa;
     box-shadow: none;
     color: #fafafa;
-    font-family: AvantGardeMedium;
+    font-family: AvantGardeLight;
     font-size: 0.875rem;
     outline: none;
+    width: 100%;
 }
-
-
-
