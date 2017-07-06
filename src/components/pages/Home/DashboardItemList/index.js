@@ -1,22 +1,14 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
+import container from './container';
 import DashboardHeader from '../DashboardHeader';
 import DashboardItem from '../DashboardItem';
 import './styles.css';
 
-function DashboardItemList() {
-    const itemsMock = [
-        {
-            title: 'tikka massala',
-            image: '',
-            info: {
-                calories: '23 cal',
-                sodium: '31 g',
-                fat: '21 g'
-            }
-        }
-    ];
+function DashboardItemList(props) {
+    const {
+        foods
+    } = props;
 
     return (
         <section className="dashboard-item-list">
@@ -26,7 +18,7 @@ function DashboardItemList() {
             />
             <ul className="dashboard-item-list__content">
                 {
-                    itemsMock.map((item, index) => (
+                    foods.map((item, index) => (
                         <DashboardItem
                             key={index}
                             {...item}
@@ -38,4 +30,4 @@ function DashboardItemList() {
     );
 }
 
-export default DashboardItemList;
+export default container(DashboardItemList);

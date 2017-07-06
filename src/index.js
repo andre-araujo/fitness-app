@@ -1,9 +1,22 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
+import { Provider, connect } from 'react-redux';
 
 import '../node_modules/font-awesome/css/font-awesome.min.css';
 import './index.css';
 
+import store from './store';
 import Home from './components/pages/Home';
 
-ReactDOM.render(<Home />, document.getElementById('root'));
+function App() {
+    return (
+        <Provider store={store}>
+            <Home />
+        </Provider>
+    );
+}
+
+render(
+    <App />,
+    document.getElementById('root')
+);
