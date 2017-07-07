@@ -2,7 +2,7 @@
 import { connect } from 'react-redux';
 
 import {
-    addFood
+    getAllFoods
 } from '../../../../actions';
 
 function mapStateToProps(state) {
@@ -13,8 +13,8 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
     return {
-        addFood: (data) => {
-            dispatch(addFood(data))
+        getAllFoods: (data) => {
+            dispatch(getAllFoods(data))
         }
     }
 }

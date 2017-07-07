@@ -6,29 +6,28 @@ const db = low('server/db/db.json');
 
 if (!db.get('menu').value()) {
     db.set('menu', [])
-        .write()
+        .write();
 }
 
 function createFood(data) {
     db.get('menu')
-        .push({
-            id: uuid(),
-            data: data
-        }).write();
+        .push(Object.assign(data, {
+            id: uuid()
+        })).write();
 }
 
-function deleteFood(data) {
+function removeFood(id) {
     db.get('menu')
-        .remove({ id: data.id })
-        .write()
+        .remove(id)
+        .write();
 }
 
 function getAllFoods() {
-    return db.get('menu')
+    return db.get('menu');
 }
 
 module.exports = {
     createFood,
-    deleteFood,
+    removeFood,
     getAllFoods
 };

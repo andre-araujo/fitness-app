@@ -17,6 +17,8 @@
     "react-scripts": "1.0.10",
     "react-test-renderer": "^15.6.1",
     "redux": "^3.7.1",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.2.0",
     "uuid": "^3.1.0"
   },
   "scripts": {
@@ -26,7 +28,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom --coverage",
     "eject": "react-scripts eject",
-    "lint": "eslint .",
+    "lint:client": "eslint ./server",
+    "lint:server": "eslint ./src",
+    "lint": "npm run lint:client && npm run lint:server",
     "comb": "csscomb src"
   },
   "devDependencies": {

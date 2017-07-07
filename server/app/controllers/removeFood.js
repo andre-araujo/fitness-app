@@ -1,16 +1,16 @@
 const foodModel = require('../model/foods');
 
-function deleteFood(req, res) {
+function removeFood(req, res) {
     if (!req.body) {
         res.send('error');
         return;
     }
 
-    foodModel.deleteFood(req.body);
+    foodModel.removeFood(req.body);
 
     res.send({
         status: 'ok'
     });
 }
 
-module.exports = deleteFood;
+module.exports = removeFood;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { Provider, connect } from 'react-redux';
+import { Provider } from 'react-redux';
 
 import '../node_modules/font-awesome/css/font-awesome.min.css';
 import './index.css';

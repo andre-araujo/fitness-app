@@ -1,6 +1,6 @@
 .dashboard-item {
-    flex: 0 0 33.333%;
     padding: 0.9375rem;
+    width: 100%;
 }
 
 .dashboard-item__header {
@@ -56,4 +56,13 @@
     justify-content: center;
     top: 0;
     width: 100%;
+}
+
+.dashboard-item__delete {
+    cursor: pointer;
+    display: inline-block;
+}
+
+.dashboard-item__delete-icon {
+    font-size: 1.5rem;
 }
