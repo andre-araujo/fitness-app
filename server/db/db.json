@@ -1,3 +1,54 @@
 {
-  "menu": []
+  "menu": [
+    {
+      "title": "tikka massala",
+      "image": "",
+      "info": {
+        "calories": "23 cal",
+        "sodium": "31 g",
+        "fat": "21 g"
+      },
+      "id": "7ee2ab44-ae0a-4cdc-82ed-429b6ad09ae9"
+    },
+    {
+      "title": "tikka massala",
+      "image": "",
+      "info": {
+        "calories": "23 cal",
+        "sodium": "31 g",
+        "fat": "21 g"
+      },
+      "id": "70af3ef4-f689-42cc-8c28-98dfc1d38aac"
+    },
+    {
+      "title": "tikka massala",
+      "image": "",
+      "info": {
+        "calories": "23 cal",
+        "sodium": "31 g",
+        "fat": "21 g"
+      },
+      "id": "023cfc85-ee9f-47a1-9420-812e6ca61443"
+    },
+    {
+      "title": "sdadsadsa",
+      "id": "652007da-0d13-4e51-8b80-6267110d77c4"
+    },
+    {
+      "title": "Teste",
+      "id": "33a3336d-488d-4c1f-90e2-d6b9c65bf367"
+    },
+    {
+      "title": "seddfs",
+      "id": "597d818c-0d90-4a0c-8b97-cc463346862a"
+    },
+    {
+      "title": "sdasad",
+      "id": "d3bcc887-c292-493e-a267-363ec52a9f12"
+    },
+    {
+      "title": "assa",
+      "id": "55347c4a-0a20-4420-aabe-c35ae9193b98"
+    }
+  ]
 }

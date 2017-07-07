@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import container from './container';
 import DashboardHeader from '../DashboardHeader';
 import TextInput from '../../../common/TextInput';
 import Radio from '../../../common/Radio';
@@ -11,13 +12,24 @@ class DashboardAddItem extends Component {
         super(props);
 
         this.state = {
-            foodName: '',
-            password: ''
+            foodName: ''
         };
     }
 
     _addFood = (e) => {
         e.preventDefault();
+
+        const foodName = this.state.foodName;
+
+        if (foodName.length > 0) {
+            this.props.addFood({
+                title: foodName
+            });
+
+            this.setState({
+                foodName: ''
+            })
+        }
     };
 
     _foodNameInputChange = (text) => {
@@ -69,4 +81,4 @@ class DashboardAddItem extends Component {
     }
 }
 
-export default DashboardAddItem;
+export default container(DashboardAddItem);

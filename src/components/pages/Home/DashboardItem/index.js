@@ -57,7 +57,7 @@ function DashboardItem({
 DashboardItem.defaultProps = {
     title: '',
     image: null,
-    info: null
+    info: {}
 }
 
 DashboardItem.propTypes = {

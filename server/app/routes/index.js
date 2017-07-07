@@ -10,7 +10,7 @@ const deleteFood = require('../controllers/deleteFood');
 
 
 function routes(app) {
-    app.get(`${config.API_URL}/get-foods`, getFoods);
+    app.get(`${config.API_URL}/get-all-foods`, getFoods);
     app.post(`${config.API_URL}/add-food`, jsonParser, setFood);
     app.post(`${config.API_URL}/remove-food`, jsonParser, deleteFood);
 }
