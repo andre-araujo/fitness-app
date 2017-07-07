@@ -11,7 +11,7 @@ const postHeaders = {
 
 function getAllFoods() {
     const fetchedData = dispatch =>
-        fetch('http://127.0.0.1:3002/api/get-all-foods')
+        fetch('/api/get-all-foods')
             .then(resp => resp.json())
             .then((resp) => {
                 if (resp && resp.status === 'ok') {
@@ -28,7 +28,7 @@ function getAllFoods() {
 
 function addFood(data) {
     const fetchedData = dispatch =>
-        fetch('http://127.0.0.1:3002/api/add-food', {
+        fetch('/api/add-food', {
             headers: postHeaders,
             method: 'POST',
             body: JSON.stringify(data)
@@ -45,7 +45,7 @@ function addFood(data) {
 
 function removeFood(id) {
     const fetchedData = dispatch =>
-        fetch('http://127.0.0.1:3002/api/remove-food', {
+        fetch('/api/remove-food', {
             headers: postHeaders,
             method: 'POST',
             body: JSON.stringify({ id })
