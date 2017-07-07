@@ -2,10 +2,7 @@
     display: inline-block;
     margin-bottom: 0.725rem;
     text-align: center;
-}
-
-.radio:not(:first-child) {
-    margin-left: 1rem;
+    margin: 0.5rem;
 }
 
 .radio__field {

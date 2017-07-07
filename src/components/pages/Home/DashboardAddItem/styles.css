@@ -6,5 +6,6 @@
 }
 
 .dashboard-add-item__radio-group {
+    text-align: center;
     margin-bottom: 2rem;
 }
