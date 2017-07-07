@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
 import container from './container';
 import DashboardHeader from '../DashboardHeader';
@@ -24,10 +24,13 @@ class DashboardItemList extends Component {
                 <ul className="dashboard-item-list__content">
                     {
                         foods.map((item, index) => (
-                            <DashboardItem
+                            <li
                                 key={index}
-                                {...item}
-                            />
+                                className="dashboard-item-list__item">
+                                <DashboardItem
+                                    {...item}
+                                />
+                            </li>
                         ))
                     }
                 </ul>

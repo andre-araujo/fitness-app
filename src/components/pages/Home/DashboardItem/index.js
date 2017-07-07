@@ -1,12 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import container from './container';
 import './styles.css';
 
 function DashboardItem({
+    id,
     title,
     image,
-    info
+    info,
+    removeFood
 }) {
     const infoKeys = Object.keys(info);
     const infoRows = infoKeys.map((infokey, index) => (
@@ -18,39 +21,50 @@ function DashboardItem({
         </p>
     ));
 
+    const _deleteFood = () => {
+        removeFood(id);
+    };
+
     return (
-        <li className="dashboard-item">
-            <section>
-                <header className="dashboard-item__header">
-                    <h3 className="dashboard-item__title">
-                        { title }
-                    </h3>
-                </header>
-                <div className="dashboard-item__content">
-                    <div
-                        style={{
-                            backgroundImage: `url(${image})`
-                        }}
-                        className="dashboard-item__image">
+        <section className="dashboard-item">
+            <header className="dashboard-item__header">
+                <h3 className="dashboard-item__title">
+                    { title }
+                </h3>
+            </header>
+            <div className="dashboard-item__content">
+                <div
+                    style={{
+                        backgroundImage: `url(${image})`
+                    }}
+                    className="dashboard-item__image">
 
-                        {
-                            !image &&
-                            <div className="dashboard-item__no-image">
-                                <i
-                                    className="fa fa-file-image-o"
-                                    aria-hidden="true"
-                                />
-                                <span>No image found!</span>
-                            </div>
-                        }
-
-                    </div>
-
-                    { infoRows }
+                    {
+                        !image &&
+                        <div className="dashboard-item__no-image">
+                            <i
+                                className="fa fa-file-image-o"
+                                aria-hidden="true"
+                            />
+                            <span>No image found!</span>
+                        </div>
+                    }
 
                 </div>
-            </section>
-        </li>
+
+                { infoRows }
+
+                <div
+                    role="presentation"
+                    className="dashboard-item__delete"
+                    onClick={_deleteFood}>
+                    <i
+                        className="fa fa-trash dashboard-item__delete-icon"
+                        aria-hidden="true"
+                    />
+                </div>
+            </div>
+        </section>
     );
 }
 
@@ -70,4 +84,4 @@ DashboardItem.propTypes = {
     })
 }
 
-export default DashboardItem;
+export default container(DashboardItem);

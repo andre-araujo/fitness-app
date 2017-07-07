@@ -1,7 +1,6 @@
 import types from './types';
 
 const {
-    REMOVE_FOOD,
     GET_ALL_FOODS
 } = types;
 
@@ -15,12 +14,13 @@ function getAllFoods() {
         fetch('http://127.0.0.1:3002/api/get-all-foods')
             .then(resp => resp.json())
             .then((resp) => {
-                const actionData = {
-                    type: GET_ALL_FOODS,
-                    data: resp.data
-                };
-
-                dispatch(actionData)
+                if (resp && resp.status === 'ok') {
+                    const actionData = {
+                        type: GET_ALL_FOODS,
+                        data: resp.data
+                    };
+                    dispatch(actionData)
+                }
             });
 
     return fetchedData;
@@ -35,17 +35,29 @@ function addFood(data) {
         })
             .then(resp => resp.json())
             .then((resp) => {
-                dispatch(getAllFoods());
+                if (resp && resp.status === 'ok') {
+                    dispatch(getAllFoods());
+                }
             });
 
     return fetchedData;
 }
 
-function removeFood(data) {
-    return {
-        type: REMOVE_FOOD,
-        data
-    }
+function removeFood(id) {
+    const fetchedData = dispatch =>
+        fetch('http://127.0.0.1:3002/api/remove-food', {
+            headers: postHeaders,
+            method: 'POST',
+            body: JSON.stringify({ id })
+        })
+            .then(resp => resp.json())
+            .then((resp) => {
+                if (resp && resp.status === 'ok') {
+                    dispatch(getAllFoods());
+                }
+            });
+
+    return fetchedData;
 }
 
 export {

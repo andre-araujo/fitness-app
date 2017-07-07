@@ -3,11 +3,33 @@
 }
 
 .dashboard-item-list__content {
-    align-items: center;
+    align-items: flex-start;
     color: #fafafa;
-    display: flex;
     display: flex;
     flex-wrap: wrap;
     font-family: AvantGardeDemi;
     margin: 0 -0.9375rem;
 }
+
+.dashboard-item-list__item {
+    flex: 0 0 100%;
+}
+
+@media (min-width: 48rem) {
+    .dashboard-item-list__item {
+        flex: 0 0 50%;
+    }
+}
+
+@media (min-width: 62rem) {
+    .dashboard-item-list__item {
+        flex: 0 0 33.333%;
+    }
+}
+
+@media (min-width: 73.13rem) {
+    .dashboard-item-list__item {
+        flex: 0 0 25%;
+    }
+}
+

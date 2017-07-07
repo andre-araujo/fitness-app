@@ -28,7 +28,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom --coverage",
     "eject": "react-scripts eject",
-    "lint": "eslint .",
+    "lint:client": "eslint ./server",
+    "lint:server": "eslint ./src",
+    "lint": "npm run lint:client && npm run lint:server",
     "comb": "csscomb src"
   },
   "devDependencies": {
