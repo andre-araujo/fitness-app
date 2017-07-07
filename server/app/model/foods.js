@@ -9,7 +9,7 @@ if (!db.get('menu').value()) {
         .write();
 }
 
-function createFood(data) {
+function setFood(data) {
     db.get('menu')
         .push(Object.assign(data, {
             id: uuid()
@@ -27,7 +27,7 @@ function getAllFoods() {
 }
 
 module.exports = {
-    createFood,
+    setFood,
     removeFood,
     getAllFoods
 };
