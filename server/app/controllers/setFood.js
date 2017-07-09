@@ -2,10 +2,13 @@
 const GoogleImages = require('google-images');
 const env = require('node-env-file');
 
+const config = require('../../utils/config');
 const fetchNutritionixAPI = require('../../utils/fetchNutritionixAPI');
 const foodModel = require('../model/foods');
 
-env('.env');
+if (!config.IS_PRODUCTION) {
+    env('.env');
+}
 
 const googleImages = new GoogleImages(
     process.env.GOOGLE_SEARCH_CSE,
