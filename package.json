@@ -33,7 +33,7 @@
     "server": "nodemon server/index.js",
     "client": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom --coverage --watch",
+    "test": "react-scripts test --env=jsdom --coverage",
     "eject": "react-scripts eject",
     "lint:client": "eslint ./server",
     "lint:server": "eslint ./src",
