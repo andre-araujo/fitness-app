@@ -9,7 +9,7 @@ A little app to manage a food menu using the [Nutritionix API](https://developer
 `npm start`
 
 ## Config .env
-This app have the main purpose is to show react-redux workflow, but, if ou want to run this app properly, you need the KEYS for google and nutritionix APIs.
+This app's main purpose is to show react-redux workflow, but, if you want to run this app properly, you need the KEYS for google and nutritionix APIs.
 
 First step, create an `.env` file at the application root directory with the following content:
 
