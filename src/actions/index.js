@@ -1,13 +1,21 @@
 import types from './types';
 
 const {
-    GET_ALL_FOODS
+    GET_ALL_FOODS,
+    SET_LOADING
 } = types;
 
 const postHeaders = {
     Accept: 'application/json',
     'Content-Type': 'application/json'
 };
+
+function setLoading(state) {
+    return {
+        type: SET_LOADING,
+        loading: state
+    };
+}
 
 function getAllFoods() {
     const fetchedData = dispatch =>
@@ -27,7 +35,9 @@ function getAllFoods() {
 }
 
 function addFood(data) {
-    const fetchedData = dispatch =>
+    const fetchedData = (dispatch) => {
+        dispatch(setLoading(true));
+
         fetch('/api/add-food', {
             headers: postHeaders,
             method: 'POST',
@@ -35,10 +45,13 @@ function addFood(data) {
         })
             .then(resp => resp.json())
             .then((resp) => {
+                dispatch(setLoading(false));
+
                 if (resp && resp.status === 'ok') {
                     dispatch(getAllFoods());
                 }
             });
+    }
 
     return fetchedData;
 }
@@ -61,6 +74,7 @@ function removeFood(id) {
 }
 
 export {
+    setLoading,
     addFood,
     removeFood,
     getAllFoods

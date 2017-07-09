@@ -40,9 +40,12 @@ function setFood(req, res) {
                             title: moreHealthFood.item_name.split(',')[0],
                             image: images[1].url,
                             info: {
-                                cholesterol: moreHealthFood.nf_cholesterol,
-                                calories: moreHealthFood.nf_calories,
-                                sodium: moreHealthFood.nf_sodium
+                                cholesterol: moreHealthFood
+                                    .nf_cholesterol.toString(),
+                                calories: moreHealthFood
+                                    .nf_calories.toString(),
+                                sodium: moreHealthFood
+                                    .nf_sodium.toString()
                             }
                         })
 
