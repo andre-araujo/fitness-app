@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import container from './container';
 import DashboardHeader from '../DashboardHeader';
@@ -37,6 +38,16 @@ class DashboardItemList extends Component {
             </section>
         );
     }
+}
+
+DashboardItemList.defaultProps = {
+    foods: []
+}
+
+DashboardItemList.propTypes = {
+    foods: PropTypes.arrayOf(
+        PropTypes.object
+    )
 }
 
 export default container(DashboardItemList);

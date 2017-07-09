@@ -33,7 +33,7 @@
     "server": "nodemon server/index.js",
     "client": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom --coverage",
+    "test": "react-scripts test --env=jsdom --coverage --watch",
     "eject": "react-scripts eject",
     "lint:client": "eslint ./server",
     "lint:server": "eslint ./src",
@@ -43,12 +43,14 @@
   "devDependencies": {
     "babel-eslint": "^7.2.3",
     "csscomb": "^4.2.0",
+    "enzyme-redux": "^0.1.6",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^15.0.1",
     "eslint-plugin-babel": "^4.1.1",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^5.0.1",
     "eslint-plugin-react": "^7.0.1",
-    "npm-run-all": "^4.0.2"
+    "npm-run-all": "^4.0.2",
+    "redux-test-utils": "^0.1.2"
   }
 }

@@ -1,80 +1,43 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 import { isString } from '../../../lib';
 import './styles.css';
 
-class TextInput extends Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            isEmpty: true
-        };
-    }
-
-    componentDidMount() {
-        this._checkEmptyValue(this.props.value);
-    }
-
-    _checkEmptyValue(value) {
-        if (isString(value) && value.length > 0) {
-            this.setState({
-                isEmpty: false
-            });
-        } else {
-            this.setState({
-                isEmpty: true
-            });
+function TextInput({
+    value,
+    name,
+    label,
+    onChangeText
+}) {
+    const isEmpty = !(isString(value) && value.length > 0);
+    const labelClassName = classNames([
+        'text-input__label',
+        {
+            'text-input__label--empty': isEmpty
         }
-    }
+    ]);
 
-    _onChangeText = (e) => {
-        const onChangeText = this.props.onChangeText;
-        const newValue = e.target.value;
-
-        this._checkEmptyValue(newValue);
-
-        if (onChangeText) {
-            onChangeText(newValue);
-        }
-    };
-
-    render() {
-        const {
-            value,
-            name,
-            label
-        } = this.props;
-
-        const labelClassName = classNames([
-            'text-input__label',
-            {
-                'text-input__label--empty': this.state.isEmpty
-            }
-        ]);
-
-        return (
-            <div className="text-input">
-                <div className="text-input__content">
-                    <label
-                        htmlFor={name}
-                        className={labelClassName}>
-                        {label}
-                    </label>
-                    <input
-                        id={name}
-                        type="text"
-                        className="text-input__field"
-                        value={value}
-                        name={name}
-                        onChange={this._onChangeText}
-                    />
-                </div>
+    return (
+        <div className="text-input">
+            <div className="text-input__content">
+                <label
+                    htmlFor={name}
+                    className={labelClassName}>
+                    {label}
+                </label>
+                <input
+                    id={name}
+                    type="text"
+                    className="text-input__field"
+                    value={value}
+                    name={name}
+                    onChange={e => onChangeText(e.target.value)}
+                />
             </div>
-        );
-    }
+        </div>
+    );
 }
 
 TextInput.defaultProps = {
