@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import container from './container';
 import DashboardHeader from '../DashboardHeader';
 import TextInput from '../../../common/TextInput';
-import Radio from '../../../common/Radio';
 import Submit from '../../../common/Submit';
 import './styles.css';
 
@@ -55,24 +54,6 @@ class DashboardAddItem extends Component {
                         value={this.state.foodName}
                         onChangeText={this._foodNameInputChange}
                     />
-
-                    <div className="dashboard-add-item__radio-group">
-                        <Radio
-                            id="morning-radio"
-                            name="meal-time"
-                            label="morning meal"
-                        />
-                        <Radio
-                            id="afternoon-radio"
-                            name="meal-time"
-                            label="afternoon meal"
-                        />
-                        <Radio
-                            id="night-radio"
-                            name="meal-time"
-                            label="night meal"
-                        />
-                    </div>
 
                     <Submit text="Add" />
                 </form>
