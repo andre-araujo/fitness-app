@@ -22,7 +22,7 @@ describe('TextInput component', () => {
         const labelMock = 
             <label
                 className="text-input__label text-input__label--empty"
-                htmlFor="#nameMock">
+                htmlFor="nameMock">
                 labelMock
             </label>;
     
@@ -42,16 +42,6 @@ describe('TextInput component', () => {
         const textInput = mount(<TextInput {...props} />);
         const input = textInput.find('input');
 
-        it('should render a label without labelMock text without empty class when value is changed', () => {
-            input.simulate('change', {
-                target: {
-                    value: 'value'
-                }
-            });
-
-            expect(textInput.contains(labelMock)).toBe(true);
-        });
-
         it('should trigger onChangeText prop callback when value is changed', () => {
             input.simulate('change', {
                 target: {
@@ -60,20 +50,6 @@ describe('TextInput component', () => {
             });
 
             expect(props.onChangeText.mock.calls.length).toBeGreaterThanOrEqual(1);
-        });
-
-        it('should not break if onChangeText prop is missing when try to change value', () => {
-            const props = {
-                label: 'test'
-            };
-            const textInput = mount(<TextInput {...props} />);
-            const input = textInput.find('input');
-
-            input.simulate('change', {
-                target: {
-                    value: 'value'
-                }
-            });
         });
     });
 });

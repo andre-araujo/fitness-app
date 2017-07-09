@@ -11,4 +11,13 @@ describe('Container component', () => {
             </Container>
         );
     });
+
+    it('should render its children', () => {
+        const wrapper = shallow(
+            <Container>
+                <div>test</div>
+            </Container>
+        );
+        expect(wrapper.contains(<div>test</div>)).toBeTruthy();
+    });
 });

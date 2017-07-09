@@ -22,12 +22,12 @@ function DashboardHeader({
 
 
 DashboardHeader.defaultProps = {
-    title: null,
+    title: '',
     icon: null
 }
 
 DashboardHeader.propTypes = {
-    title: PropTypes.string.isRequired,
+    title: PropTypes.string,
     icon: PropTypes.string
 }
 
