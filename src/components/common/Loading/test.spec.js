@@ -1,10 +1,10 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import Radio from './index';
+import Loading from './index';
 
-describe('Radio component', () => {
+describe('Loading component', () => {
     it('should render without crashing', () => {
-        shallow(<Radio />);
+        shallow(<Loading />);
     });
 });

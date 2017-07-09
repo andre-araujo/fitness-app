@@ -2,6 +2,7 @@ import React from 'react';
 
 import Header from './../../common/Header';
 import Container from './../../common/Container';
+import Loading from './../../common/Loading';
 import DashboardAddItem from './DashboardAddItem';
 import DashboardItemList from './DashboardItemList';
 import './styles.css';
@@ -17,6 +18,8 @@ function Home() {
                     <DashboardItemList />
                 </main>
             </Container>
+
+            <Loading />
         </div>
     );
 }

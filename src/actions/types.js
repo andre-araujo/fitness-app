@@ -1,6 +1,5 @@
 
 export default {
-    ADD_FOOD: 'ADD_FOOD',
-    REMOVE_FOOD: 'REMOVE_FOOD',
+    SET_LOADING: 'SET_LOADING',
     GET_ALL_FOODS: 'GET_ALL_FOODS'
 };

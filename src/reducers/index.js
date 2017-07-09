@@ -1,11 +1,13 @@
 import types from '../actions/types';
 
 const {
+    SET_LOADING,
     GET_ALL_FOODS
 } = types;
 
 const initialState = {
-    foods: []
+    foods: [],
+    loading: false
 };
 
 function foodReducer(state = initialState, action) {
@@ -17,6 +19,12 @@ function foodReducer(state = initialState, action) {
             return {
                 ...state,
                 ...newState
+            }
+        }
+        case SET_LOADING: {
+            return {
+                ...state,
+                loading: action.loading
             }
         }
         default:
