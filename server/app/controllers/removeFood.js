@@ -2,7 +2,7 @@ const foodModel = require('../model/foods');
 
 function removeFood(req, res) {
     if (!req.body) {
-        res.send('error');
+        res.send({ status: 'error' });
         return;
     }
 
