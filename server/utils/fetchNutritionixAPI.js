@@ -1,9 +1,10 @@
 const request = require('request');
 
-function fetchNutritionix(name, callback) {
+function fetchNutritionix(apiKey, name, callback) {
     const nutritionixPostBody = {
         appId: '12cac74c',
-        appKey: '5d9a664cae05ea728f2903215c92ceaf',
+        appKey: apiKey,
+        query: name,
         fields:[
             'item_name',
             'brand_name',
@@ -13,8 +14,8 @@ function fetchNutritionix(name, callback) {
             'nf_sodium',
             'item_type'
         ],
-        queries:{
-            item_name: name
+        filters :{
+            item_type : 1
         }
     }
 
