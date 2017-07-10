@@ -4,3 +4,19 @@
     margin: 0 auto;
     max-width: 31.25rem;
 }
+
+.dashboard-add-item__error {
+    text-align: center;
+    margin: 1rem auto;
+    max-width: 25rem;
+}
+
+.dashboard-add-item__icon {
+    color: #cc0000;
+    font-size: 2rem;
+}
+
+.dashboard-add-item__text {
+    color: #cc0000;
+    font-size: 1rem;
+}

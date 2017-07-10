@@ -2,7 +2,8 @@ import types from './types';
 
 const {
     GET_ALL_FOODS,
-    SET_LOADING
+    SET_LOADING,
+    SET_ERROR
 } = types;
 
 const postHeaders = {
@@ -14,6 +15,13 @@ function setLoading(state) {
     return {
         type: SET_LOADING,
         loading: state
+    };
+}
+
+function setError(state) {
+    return {
+        type: SET_ERROR,
+        error: state
     };
 }
 
@@ -48,7 +56,10 @@ function addFood(data) {
                 dispatch(setLoading(false));
 
                 if (resp && resp.status === 'ok') {
+                    dispatch(setError(false));
                     dispatch(getAllFoods());
+                } else {
+                    dispatch(setError(true));
                 }
             });
     }
