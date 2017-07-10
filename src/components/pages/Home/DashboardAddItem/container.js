@@ -5,6 +5,12 @@ import {
     addFood
 } from '../../../../actions';
 
+function mapStateToProps(state) {
+    return {
+        error: state.error
+    }
+}
+
 function mapDispatchToProps(dispatch) {
     return {
         addFood: (data) => {
@@ -14,7 +20,7 @@ function mapDispatchToProps(dispatch) {
 }
 
 function container(component) {
-    return connect(null, mapDispatchToProps)(component);
+    return connect(mapStateToProps, mapDispatchToProps)(component);
 }
 
 export default container;

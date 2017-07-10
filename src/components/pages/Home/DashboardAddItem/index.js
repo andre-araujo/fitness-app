@@ -57,6 +57,21 @@ class DashboardAddItem extends Component {
 
                     <Submit text="Add" />
                 </form>
+
+                {
+                    this.props.error &&
+                    <div className="dashboard-add-item__error">
+                        <i
+                            className="fa fa-frown-o dashboard-add-item__icon"
+                            aria-hidden="true"
+                        />
+                        <p className="dashboard-add-item__text">
+                            We can not find the food you are looking for, 
+                            if you are in another language, 
+                            try to find it in English
+                        </p>
+                    </div>
+                }
             </section>
         );
     }

@@ -58,5 +58,11 @@ describe('DashboardAddItem component', () => {
 
             expect(addFoodSpy.mock.calls.length).toBe(1);
         });
+
+        it('should have an error message if error prop is true', () => {
+            const wrapper = shallow(<DashboardAddItem error/>);
+
+            expect(wrapper.find('.dashboard-add-item__error')).toBeTruthy();
+        });
     });
 });

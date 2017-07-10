@@ -2,12 +2,14 @@ import types from '../actions/types';
 
 const {
     SET_LOADING,
+    SET_ERROR,
     GET_ALL_FOODS
 } = types;
 
 const initialState = {
     foods: [],
-    loading: false
+    loading: false,
+    error: false
 };
 
 function foodReducer(state = initialState, action) {
@@ -25,6 +27,12 @@ function foodReducer(state = initialState, action) {
             return {
                 ...state,
                 loading: action.loading
+            }
+        }
+        case SET_ERROR: {
+            return {
+                ...state,
+                error: action.error
             }
         }
         default:
